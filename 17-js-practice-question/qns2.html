@@ -1,0 +1,74 @@
+<!--Create a web app where I can input a text. Now create two buttons + and -. On clicking + increase the fontSize by 2px and vice versa.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Qns 2</title>
+</head>
+
+<style>
+    .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 10px;
+        padding: 10px;
+    }
+    div{
+        margin: 10px;
+        padding: 10px;
+    }
+    .btn button{
+        width: 80px;
+        height: 40px;
+        color: white;
+        background-color: green;
+    }
+    .result{
+        background-color: green;
+        color: white;
+        font-size: 12px;
+        font-weight: bold;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div><textarea name="text" id="text" cols="50" rows="10" class="text"></textarea></div>
+        <div class="btn"><button type="submit" class="btn-submit">Submit</button></div>
+        <div class="btn">
+            <button class="add">+</button>
+            <button class="sub">-</button>
+        </div>
+        <div class="result"></div>
+    </div>
+    <script>
+        let text = document.querySelector(".text");
+        let add = document.querySelector(".add");
+        let sub = document.querySelector(".sub");
+        let result = document.querySelector(".result");
+        let submit = document.querySelector(".btn-submit");
+        
+        let curFontSize = 12;
+
+        submit.addEventListener('click', function(){
+            curFontSize = 12;
+            result.innerHTML = text.value;
+            result.style.fontSize = curFontSize+"px";
+        })
+        add.addEventListener('click', function(){
+            curFontSize = curFontSize+2;
+            result.style.fontSize = curFontSize+"px";
+        })
+        sub.addEventListener('click', function(){
+            curFontSize = curFontSize-2;
+            result.style.fontSize = curFontSize+"px";
+        })
+    
+    </script>
+</body>
+</html>
