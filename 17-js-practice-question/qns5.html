@@ -1,0 +1,56 @@
+<!--Create a CLI app which takes name, unit test marks, pre final marks, final marks of 5 students. 
+    And then print who has the highest marks. What if I ask you to print the average as well?-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Qns 5</title>
+  </head>
+  <body>
+    <div class="result"></div>
+    <div class="container"></div>
+    <script>
+      const n = 5;
+      const details = [];
+      let name, unittest, prefinal, final;
+
+      for (let i = 0; i < n; i++) {
+        name = prompt("Enter name of student:");
+        unittest = Number(prompt("Unit test marks"));
+        prefinal = Number(prompt("Pre-final test marks"));
+        final = Number(prompt("Final test marks"));
+        dict = {
+          name: name,
+          marks: [unittest, prefinal, final],
+          totalmarks: unittest + prefinal + final,
+          avgmarks: function() {
+            return this.totalmarks / 3;
+          }
+        };
+        details.push(dict);
+      }
+      console.log(details);
+      let count = 0;
+      max = details[count].totalmarks;
+      for (i = 1; i < n; i++) {
+        if (details[i].totalmarks > max) {
+          max = details[i].totalmarks;
+          count = i;
+        }
+      }
+      document.querySelector(".result").innerHTML =
+        details[count].name +
+        " has the highest marks " +
+        details[count].totalmarks;
+      for (let i = 0; i < n; i++) {
+        const avgMarksHtml = document.createElement("p");
+        avgMarksHtml.innerHTML =
+          "Average marks of " + details[i].name + ":" + details[i].avgmarks();
+        document.querySelector(".container").appendChild(avgMarksHtml);
+      }
+    </script>
+  </body>
+</html>
