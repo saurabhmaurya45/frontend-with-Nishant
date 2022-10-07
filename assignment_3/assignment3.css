@@ -1,0 +1,455 @@
+:root {
+  --icon-color: rgba(0, 127, 255, 1);
+  --bg-color: rgba(243, 246, 249, 1);
+  --primary-black: rgb(0, 0, 0);
+  --primary-black-less-opacity: rgba(0, 0, 0, 0.8);
+  --primary-white: rgb(255, 255, 255);
+  --primary-white--less-opacity: rgb(255, 255, 255,0.8);
+  --code-bg-color: rgba(140, 148, 155, 0.1);
+  --code-content-color: rgba(140, 148, 155, 0.15);
+  --gradient-color1: rgba(0, 120, 240, 1);
+  --gradient-color2: rgba(0, 91, 182, 1);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.top-message {
+  padding-top: 5px;
+  width: 100%;
+  height: 50px;
+  background-image: linear-gradient(
+    to right,
+    var(--gradient-color1),
+    var(--gradient-color2)
+  );
+  color: white;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.top-message a {
+  color: var(--primary-white);
+  text-decoration: underline;
+}
+
+.navbar {
+  margin-left: 6%;
+  margin-right: 6%;
+  color: var(--primary-black-less-opacity);
+  font-weight: bold;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.nav-left {
+  position: absolute;
+  left: 0px;
+  width: 32%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.nav-left .nav-logo {
+  margin-top: 10px;
+  margin-right: 15px;
+  color: var(--icon-color);
+  font-weight: bold;
+  font-size: 26px;
+}
+
+.nav-right {
+  position: absolute;
+  right: 10px;
+  width: 35%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.nav-search {
+  width: 285.5px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 300;
+}
+.nav-search i {
+  position: absolute;
+  top: -6px;
+  left: 60px;
+  color: var(--icon-color);
+  z-index: 1;
+}
+.nav-search input {
+  position: absolute;
+  height: 35px;
+  width: 200px;
+  background-color: var(--bg-color);
+  border: 5px solid var(--bg-color);
+  border-radius: 10px;
+}
+.nav-search input::placeholder {
+  text-align: center;
+}
+.nav-search .nav-ctrl {
+  width: 50px;
+  text-align: center;
+  background-color: white;
+  color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  right: 50px;
+  z-index: 1;
+  border-radius: 5px;
+  font-weight: bold;
+}
+.nav-icon {
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  background-color: white;
+  border: 2px solid var(--bg-color);
+  border-radius: 10px;
+  box-shadow: 5px var(--bg-color);
+  color: var(--icon-color);
+  font-size: 16px;
+  text-align: center;
+  padding: 5px;
+}
+.nav-github {
+  right: 60px;
+}
+.nav-moon {
+  right: 10px;
+}
+
+.container {
+  margin: 0px 6% 0px 6%;
+  display: flex;
+}
+.left-container {
+  position: absolute;
+  left: 50px;
+  width: 40%;
+  margin: 15px;
+  padding: 15px;
+}
+.left-container h1 {
+  font-size: 56px;
+  font-weight: 800;
+  color: var(--primary-black);
+}
+
+.left-container h1 span {
+  color: var(--icon-color);
+}
+.left-container p {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: var(--primary-black-less-opacity);
+}
+.left-container button {
+  width: 150px;
+  height: 60px;
+  color: var(--primary-white);
+  font-weight: bold;
+  font-size: 16.5px;
+  border: 5px solid;
+  border-color: linear-gradient(
+    to right,
+    var(--gradient-color1),
+    var(--gradient-color2)
+  );
+  border-radius: 15px;
+  background-color: var(--gradient-color1);
+}
+.left-container .npm-code {
+  width: 360px;
+  height: 50px;
+  font-size: 16.5px;
+  font-weight: 500;
+  background-color: var(--code-bg-color);
+  color: var(--primary-black-less-opacity);
+  border: 1px solid var(--code-content-color);
+  border-radius: 10px;
+  margin-left: 10px;
+  padding: 12px;
+  box-shadow: 100px var(--code-bg-color);
+  vertical-align: middle;
+}
+.left-container .internal-container {
+  display: flex;
+  justify-content: flex-start;
+}
+.internal-container .npm-code i {
+  margin-left: 20px;
+}
+.internal-container button:hover {
+  background-color: var(--gradient-color2);
+}
+.internal-container p:hover,
+i:hover {
+  color: var(--icon-color);
+  border-color: var(--icon-color);
+}
+/* right side container css*/
+.right-container {
+  position: absolute;
+  right: 0px;
+  width: 50%;
+  background-color: var(--bg-color);
+  display: flex;
+}
+
+.side-cont {
+  position: absolute;
+  height: 550px;
+  width: 565px;
+  left: 20px;
+  top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.blue-card {
+  height: 240px;
+  width: 310px;
+  background: linear-gradient(to right bottom, var(--gradient-color1), var(--gradient-color2) 120%  );
+  margin-top: -285px;
+  border-radius: 13px;
+  position: absolute;
+  display: flex;
+}
+
+.clock {
+  position: absolute;
+  height: 24px;
+  width: 24px;
+  border-radius: 100%;
+  border: 3px solid white;
+  top: 20px;
+  left: 24px;
+  display: flex;
+}
+
+.clock-hand {
+  position: absolute;
+  height:10px;
+  width: 2px;
+  background-color: white;
+  margin-top: 1px;
+  margin-left: 7px;
+  position: absolute;
+}
+
+.clock-hand::before {
+  content: "";
+  height: 10px;
+  width: 1px;
+  background-color: white;
+  margin-top: 7.9px;
+  margin-left: 4px;
+  transform: rotate(120deg);
+  position: absolute;
+}
+
+.date {
+  position: absolute;
+  font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  color: rgba(255, 255, 255, 0.8);
+  top: 20px;
+  left: 5px;
+  margin-left: 57px;
+  display: flex;
+}
+
+.symbol {
+  position: absolute;
+  height: 27px;
+  width: 27px;
+  border-radius: 4px;
+  background-color: white;
+  left: 24px;
+  top: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sy {
+  position: absolute;
+  font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--icon-color);
+  font-size: 20px;
+}
+
+.check {
+  position: absolute;
+  font-weight: 500;
+  margin: 10px 20px 0px 20px;
+  font-family: "IBM Plex Sans";
+  color: white;
+  top: 100px;
+}
+.person img{
+  position: absolute;
+  height: 42px;
+  width: 46px;
+  margin:10px 20px 0px 20px;
+  border-radius:4px;
+  border:1px solid black;
+  bottom: 38px;
+}
+
+.person p {
+  position: absolute;
+  font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  color: rgba(255, 255, 255, 0.7);
+  display: block;
+  left: 77px;
+  bottom: 30px;
+  font-size: 18px;
+}
+.dd {
+  color: white;
+  font-family: "IBM Plex Sans";
+  font-size: 17px;
+}
+
+.progress-bar {
+  position: absolute;
+  bottom: 22px;
+  left: 20px;
+  background-color: rgb(28, 134, 215);
+  height: 6px;
+  width: 245px;
+  border-radius: 20px;
+}
+.white{
+  height:6px;width:60% ;
+  background-color: aliceblue;
+  border-radius: 20px;
+}
+.percentage-score{
+  position: absolute;
+  color: var(--primary-white--less-opacity);
+  right: 13px;
+  bottom: 18px;
+}
+
+.song-card {
+  height: 170px;
+  width: 310px;
+  margin-top: 170px;
+  background: white;
+  border-radius: 13px;
+  border: 1px solid grey;
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.song {
+  margin-top: 14px;
+  margin-left: 10px;
+}
+.ww {
+  height: 115px;
+  width: 111px;
+  border-radius: 13px;
+  border: 1px solid black;
+}
+.song-info {
+  height: 112px;
+  width: 164px;
+}
+
+.s-info {
+  display: inline;
+  line-height: 0px;
+}
+
+.s-circle {
+  height: 30px;
+  width: 160px;
+  margin-top: 27px;
+  line-height: 10px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.circle-1 {
+  height: 25px;
+  width: 25px;
+  border: 3px solid grey;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: snow;
+}
+
+.circle-2 {
+  height: 25px;
+  width: 25px;
+  border: 3px solid grey;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: snow;
+}
+
+.circle-3 {
+  height: 25px;
+  width: 25px;
+  border: 3px solid grey;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: snow;
+}
+
+#triangle {
+  width: 0;
+  height: 0;
+  border-top: 3px solid transparent;
+  border-right: 6px solid rgb(165, 159, 159);
+  border-bottom: 3px solid transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.c-2 {
+  transform: rotate(180deg);
+  border-right: 7px solid rgb(88, 85, 85) !important ;
+}
+
+.c-3 {
+  transform: rotate(180deg);
+}
+
+.most-side {
+  position: absolute;
+  right: 10px;
+  top: 20px;
+  flex-wrap: wrap;
+}
+.most-side-img{
+  padding-top: 15px;
+}
+.most-side-img img{
+  height: 250px;
+  width: 320px;
+}
