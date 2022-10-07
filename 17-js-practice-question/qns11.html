@@ -1,0 +1,28 @@
+<!--Create a password checker web app. If password is lesser than 10 characters then show an error to user otherwise show success. Someone can ask to make the submit button disabled. Some can ask to make the input field green or red depending on input.-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Qns no 11</title>
+  </head>
+  <body>
+    <input type=" password" class="ip" />
+    <input type="submit" value="submit" class="sub" />
+
+    <script>
+      let password = document.querySelector(".ip");
+      let submit = document.querySelector(".sub");
+
+      submit.addEventListener("click", function() {
+        let a = password.value;
+        if (a.length < 10) {
+          password.style.backgroundColor = "red";
+        } else {
+          password.style.backgroundColor = "green";
+        }
+      });
+    </script>
+  </body>
+</html>
