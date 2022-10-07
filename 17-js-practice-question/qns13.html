@@ -1,0 +1,49 @@
+<!--Create color variables in CSS. Two colors: primary and secondary. Now make your h1 of primary color, h2 of secondary color. Make two buttons, primary and secondary using the same color. Can you also set a font from Google Font?-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Qns no 13</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@900&family=Montserrat:wght@600&family=Noto+Sans+Mono:wght@200&family=Poppins:wght@900&family=Roboto+Condensed:wght@700&family=Roboto+Mono:wght@300&family=Sacramento&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <style>
+    :root {
+      --primary-color: rgb(255, 0, 43);
+      --secondary-color: rgb(0, 110, 255);
+    }
+    .red {
+      color: var(--primary-color);
+    }
+    .blue {
+      color: var(--secondary-color);
+    }
+    .red-btn {
+      color: white;
+      background-color: var(--primary-color);
+    }
+    .blue-btn {
+      color: white;
+      background-color: var(--secondary-color);
+    }
+    h3 {
+      font-family: "Sacramento", cursive;
+    }
+  </style>
+
+  <body>
+    <h1 class="red">HELLO BY H1 !</h1>
+    <h2 class="blue">HELLO BY H2 !</h2>
+    <button class="red red-btn">RED</button>
+    <button class="blue blue-btn">BLUE</button>
+    <h3>hello...by Google-font!</h3>
+  </body>
+</html>
