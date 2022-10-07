@@ -1,0 +1,74 @@
+<!--Create a web app where I can input a text. Now, create three buttons: red, green, blue. Clicking on the button should change the text color.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Qns 4</title>
+</head>
+
+<style>
+    .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 10px;
+        padding: 10px;
+    }
+    div{
+        margin: 10px;
+        padding: 10px;
+    }
+    .btn button{
+        width: 80px;
+        height: 40px;
+        color: white;
+        background-color: green;
+    }
+    .result{
+        /* background-color: black; */
+        /* color: white; */
+        font-size: 20px;
+        font-weight: bold;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div><textarea name="text" id="text" cols="50" rows="10" class="text"></textarea></div>
+        <div class="btn"><button class="submit">submit</button></div>
+        <div class="btn">
+            <button class="red">red</button>
+            <button class="green">green</button>
+            <button class="blue">blue</button>
+        </div>
+        <div class="result"></div>
+    </div>
+    <script>
+        let text = document.querySelector(".text");
+        let red = document.querySelector(".red");
+        let green = document.querySelector(".green");
+        let blue = document.querySelector(".blue");
+        let submit = document.querySelector(".submit");
+        let result = document.querySelector(".result");
+        
+        submit.addEventListener('click', function(){
+            result.innerHTML = text.value;
+        })
+
+        red.addEventListener('click', function(){
+            result.style.color = 'red';
+        })
+        green.addEventListener('click', function(){
+            result.style.color = 'green';
+        })
+        blue.addEventListener('click', function(){
+            result.style.color = 'blue';
+        })
+        
+    </script>
+</body>
+</html>
